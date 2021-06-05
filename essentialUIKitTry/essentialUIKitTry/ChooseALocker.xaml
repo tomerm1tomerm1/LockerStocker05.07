@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="essentialUIKitTry.ChooseALocker"
+             xmlns:viewModel="clr-namespace:essentialUIKitTry.ViewModels">
+
+
+    <!--  Binding context for login page  
+    <ContentPage.BindingContext>
+        <viewModel:ChooseALockerViewModel />
+    </ContentPage.BindingContext> -->
+    
+    <StackLayout >
+        <Label Text="Lockers" HorizontalOptions="Center" FontSize="40" FontFamily="Arial" />
+        <Label Text=" "/>
+        <Label Text="Please Choose Your Locker:" FontSize="25" FontFamily="Arial"  />
+        <Label Text=" "/>
+
+        <StackLayout x:Name="MyButtons"/>
+
+
+
+
+    </StackLayout>
+</ContentPage>

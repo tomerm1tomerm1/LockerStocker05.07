@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="essentialUIKitTry.Sign_Up_Main_Page"
+             BackgroundColor="#45fd">
+    <StackLayout >
+        <Label Text="Sign Up Page" HorizontalOptions="Center" FontSize="40" FontFamily="casual" />
+        <Label Text=" "/>
+        <Label Text="Please select your status:" FontSize="25" FontFamily="casual"  />
+        <Label Text=" "/>
+
+        <Button Text="ADMIN" WidthRequest="250" BackgroundColor="red" TextColor="white"
+            HorizontalOptions="Center" Clicked="Clicked_SignUp_Admin" ></Button>
+        <Label Text=" "/>
+        <Button Text="CUSTOMER" WidthRequest="250" BackgroundColor="red" TextColor="white"
+            HorizontalOptions="Center" Clicked="Clicked_SignUp_Customer"></Button>
+
+
+
+    </StackLayout>
+</ContentPage>
