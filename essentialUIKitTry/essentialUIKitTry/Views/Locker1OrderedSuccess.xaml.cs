@@ -28,5 +28,9 @@ namespace essentialUIKitTry.Views
         {
             Navigation.PushAsync(new LockerProfilePage(this.lockerId));
         }
+        void Back_To_Menu_Clicked(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new ChooseALocker());
+        }
     }
 }

@@ -3,6 +3,7 @@ using essentialUIKitTry.Validators.Rules;
 using essentialUIKitTry.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
+using System;
 
 namespace essentialUIKitTry.ViewModels
 {
@@ -117,10 +118,16 @@ namespace essentialUIKitTry.ViewModels
         /// <param name="obj">The Object</param>
         private void LoginClicked(object obj)
         {
-            if (this.AreFieldsValid())
+            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            var stringChars = new char[8];
+            var random = new Random();
+
+            for (int i = 0; i < stringChars.Length; i++)
             {
-                Application.Current.MainPage = new NavigationPage(new ChooseALocker());
+                stringChars[i] = chars[random.Next(chars.Length)];
             }
+            App.m_myUserKey = new string(stringChars); 
+            Application.Current.MainPage = new NavigationPage(new ChooseALocker());
         }
 
         /// <summary>

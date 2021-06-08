@@ -57,7 +57,15 @@
                         Text="TRACK YOUR ORDER"
                         Clicked="OrderProfileClicked"
                         VerticalOptions="Start"
-                        WidthRequest="245" /> 
+                        WidthRequest="245" />
+
+                    <button:SfButton
+                        Margin="0,1"
+                        Style="{StaticResource GradientButtonStyle}"
+                        Text="BACK TO MENU"
+                        Clicked="Back_To_Menu_Clicked"
+                        VerticalOptions="Start"
+                        WidthRequest="245" />
 
                 </StackLayout>
             </ScrollView>

@@ -13,6 +13,7 @@ namespace essentialUIKitTry
     public partial class App : Application
     {
         public static string ImageServerPath { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
+        public static string m_myUserKey { get; set; } = "Tomer";
         public App()
         {
             InitializeComponent();

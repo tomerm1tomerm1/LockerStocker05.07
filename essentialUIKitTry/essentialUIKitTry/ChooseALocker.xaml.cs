@@ -1,4 +1,5 @@
 ﻿using essentialUIKitTry.Views;
+using essentialUIKitTry;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,6 @@ using CounterFunctions;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
 
 
 
@@ -33,6 +33,35 @@ namespace essentialUIKitTry
         }
 
 
+        Button getBtnForLocker(Locker locker)
+        {
+            int btnTimingFontSize=10;
+            int btn_width = 60;
+            int btn_height = 80;
+            Button tmp_btn = new Button()
+            {
+                Text = "L" + locker.Id, 
+                StyleId = "" + locker.Id,
+                WidthRequest = btn_width,
+                HeightRequest = btn_height
+            };
+            if ((!locker.available) && (locker.user_key == App.m_myUserKey))
+            {
+                tmp_btn.BackgroundColor = Color.LightSteelBlue;
+                tmp_btn.Text = AzureApi.GetRemainingTime(locker);
+                tmp_btn.FontSize = btnTimingFontSize;
+            }
+            else if (locker.available)
+            {
+                tmp_btn.BackgroundColor = Color.Green;
+            }
+            else
+            {
+                tmp_btn.BackgroundColor = Color.Red;
+            }
+            return tmp_btn;
+        }
+
         async void SetLockerList()
         {
             int numOfRows = 4;
@@ -50,70 +79,13 @@ namespace essentialUIKitTry
                     lockerRows[rowIdx].Add(tmpLocker);
                 }
             }
-            int btn_width = 60;
-            int btn_height = 80;
             for(int idxInRow = 0; idxInRow < lockersInRow; idxInRow++)
             {
-                Button btn1 = new Button()
-                {
-                    Text = "L" + lockerRows[0][idxInRow].Id, //Whatever prop you wonna put as title;
-                    StyleId = "" + lockerRows[0][idxInRow].Id, //use a property from event as id to be passed to handler
-                    WidthRequest=btn_width,
-                    HeightRequest=btn_height
-                };
-                if (lockerRows[0][idxInRow].available)
-                {
-                    btn1.BackgroundColor = Color.Green;
-                }
-                else
-                {
-                    btn1.BackgroundColor = Color.Red;
-                }
-                Button btn2 = new Button()
-                {
-                    Text = "L" + lockerRows[1][idxInRow].Id, 
-                    StyleId = "" + lockerRows[1][idxInRow].Id, 
-                    WidthRequest=btn_width,
-                    HeightRequest=btn_height
-                };
-                if (lockerRows[1][idxInRow].available)
-                {
-                    btn2.BackgroundColor = Color.Green;
-                }
-                else
-                {
-                    btn2.BackgroundColor = Color.Red;
-                }
-                Button btn3 = new Button()
-                {
-                    Text = "L" + lockerRows[2][idxInRow].Id, //Whatever prop you wonna put as title;
-                    StyleId = "" + lockerRows[2][idxInRow].Id, //use a property from event as id to be passed to handler
-                    WidthRequest=btn_width,
-                    HeightRequest=btn_height
-                };
-                if (lockerRows[2][idxInRow].available)
-                {
-                    btn3.BackgroundColor = Color.Green;
-                }
-                else
-                {
-                    btn3.BackgroundColor = Color.Red;
-                }
-                Button btn4 = new Button()
-                {
-                    Text = "L" + lockerRows[3][idxInRow].Id, //Whatever prop you wonna put as title;
-                    StyleId = "" + lockerRows[3][idxInRow].Id, //use a property from event as id to be passed to handler
-                    WidthRequest=btn_width,
-                    HeightRequest=btn_height
-                };
-                if (lockerRows[3][idxInRow].available)
-                {
-                    btn4.BackgroundColor = Color.Green;
-                }
-                else
-                {
-                    btn4.BackgroundColor = Color.Red;
-                }
+                Button btn1 = getBtnForLocker(lockerRows[0][idxInRow]);
+                Button btn2 = getBtnForLocker(lockerRows[1][idxInRow]);
+                Button btn3 = getBtnForLocker(lockerRows[2][idxInRow]);
+                Button btn4 = getBtnForLocker(lockerRows[3][idxInRow]);
+
                 btn1.Clicked += Locker_ClickedAsync;
                 btn2.Clicked += Locker_ClickedAsync;
                 btn3.Clicked += Locker_ClickedAsync;

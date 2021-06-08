@@ -53,6 +53,10 @@ namespace essentialUIKitTry
                 }
             }
         }
+        public static string GetRemainingTime(Locker locker)
+        {
+            return ("" + (locker.release_time - DateTimeOffset.Now.AddHours(0))).Split('.')[0];
+        }
 
 
 
@@ -63,7 +67,7 @@ namespace essentialUIKitTry
             locker.Id = locker_num;
             locker.available = false;
             locker.locked = true;
-            locker.user_key = userKey;
+            locker.user_key = App.m_myUserKey;
 
             var FuncUri = "https://lockerfunctionapp.azurewebsites.net/api/set-occupy";
 
