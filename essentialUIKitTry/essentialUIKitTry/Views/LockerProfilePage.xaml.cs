@@ -29,7 +29,9 @@ namespace essentialUIKitTry.Views
             this.locker = await AzureApi.GetLocker(lockerId);
             LockerIdLbl.Text = "Locker Id: " + lockerId;
 
-            TimeRemainingLbl.Text = "" + (locker.release_time - DateTimeOffset.Now.AddHours(0));
+
+            string timeRemainingStr = ("" + (locker.release_time - DateTimeOffset.Now.AddHours(0))).Split('.')[0];
+            TimeRemainingLbl.Text = timeRemainingStr;
 
 
             if (this.locker.locked) status = "Locked";

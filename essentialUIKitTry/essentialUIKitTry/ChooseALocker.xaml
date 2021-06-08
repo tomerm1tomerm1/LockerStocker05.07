@@ -16,7 +16,10 @@
         <Label Text="Please Choose Your Locker:" FontSize="25" FontFamily="Arial"  />
         <Label Text=" "/>
 
-        <StackLayout x:Name="MyButtons"/>
+        <StackLayout x:Name="ButtonsRow1" Orientation="Horizontal" HorizontalOptions="Center"/>
+        <StackLayout x:Name="ButtonsRow2" Orientation="Horizontal" HorizontalOptions="Center"/>
+        <StackLayout x:Name="ButtonsRow3" Orientation="Horizontal" HorizontalOptions="Center"/>
+        <StackLayout x:Name="ButtonsRow4" Orientation="Horizontal" HorizontalOptions="Center"/>
 
 
 

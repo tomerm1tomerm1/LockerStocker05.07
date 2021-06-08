@@ -21,10 +21,8 @@ namespace essentialUIKitTry
     public partial class ChooseALocker : ContentPage
     {
 
-     public List<Locker> myList;
-      private  Locker locker1;
-        private Locker locker2;
-        private Locker locker3; //your list here
+        public List<Locker> myList;
+        public List<Locker>[] lockerRows = {new List<Locker>(), new List<Locker>(), new List<Locker>(), new List<Locker>() };
 
         public ChooseALocker()
         {
@@ -32,56 +30,98 @@ namespace essentialUIKitTry
             InitializeComponent();
             myList = new List<Locker>();
             SetLockerList();
-
-            /*foreach (var item in myList)
-            {
-                Button btn = new Button()
-                {
-                    Text = "Locker " + item.Id, //Whatever prop you wonna put as title;
-                     StyleId = "" + item.Id //use a property from event as id to be passed to handler
-                };
-                if ( item.available)
-                {
-                    btn.BackgroundColor = Color.Green; 
-                } else
-                {
-                    btn.BackgroundColor = Color.Red; 
-                }
-                btn.Clicked += Locker1_ClickedAsync;
-                MyButtons.Children.Add(btn);
-            }*/
         }
 
 
         async void SetLockerList()
         {
-            MyButtons.Children.Clear();
+            int numOfRows = 4;
+            int lockersInRow = 5;
+            ButtonsRow1.Children.Clear();
+            ButtonsRow2.Children.Clear();
+            ButtonsRow3.Children.Clear();
+            ButtonsRow4.Children.Clear();
             
-            myList = new List<Locker>();
-            locker1 = await AzureApi.GetLocker(1);
-            locker2 = await AzureApi.GetLocker(2);
-            locker3 = await AzureApi.GetLocker(3);
-           //your list here
-            myList.Add(locker1);
-            myList.Add(locker2);
-            myList.Add(locker3);
-            foreach (var item in myList)
+            for(int rowIdx = 0; rowIdx < numOfRows; rowIdx++)
             {
-                Button btn = new Button()
+                for (int lockerInRowIdx = 0; lockerInRowIdx < lockersInRow; lockerInRowIdx++)
                 {
-                    Text = "Locker " + item.Id, //Whatever prop you wonna put as title;
-                    StyleId = "" + item.Id //use a property from event as id to be passed to handler
+                    Locker tmpLocker = await AzureApi.GetLocker(rowIdx * lockersInRow + lockerInRowIdx + 1);
+                    lockerRows[rowIdx].Add(tmpLocker);
+                }
+            }
+            int btn_width = 60;
+            int btn_height = 80;
+            for(int idxInRow = 0; idxInRow < lockersInRow; idxInRow++)
+            {
+                Button btn1 = new Button()
+                {
+                    Text = "L" + lockerRows[0][idxInRow].Id, //Whatever prop you wonna put as title;
+                    StyleId = "" + lockerRows[0][idxInRow].Id, //use a property from event as id to be passed to handler
+                    WidthRequest=btn_width,
+                    HeightRequest=btn_height
                 };
-                if (item.available)
+                if (lockerRows[0][idxInRow].available)
                 {
-                    btn.BackgroundColor = Color.Green;
+                    btn1.BackgroundColor = Color.Green;
                 }
                 else
                 {
-                    btn.BackgroundColor = Color.Red;
+                    btn1.BackgroundColor = Color.Red;
                 }
-                btn.Clicked += Locker_ClickedAsync;
-                MyButtons.Children.Add(btn);
+                Button btn2 = new Button()
+                {
+                    Text = "L" + lockerRows[1][idxInRow].Id, 
+                    StyleId = "" + lockerRows[1][idxInRow].Id, 
+                    WidthRequest=btn_width,
+                    HeightRequest=btn_height
+                };
+                if (lockerRows[1][idxInRow].available)
+                {
+                    btn2.BackgroundColor = Color.Green;
+                }
+                else
+                {
+                    btn2.BackgroundColor = Color.Red;
+                }
+                Button btn3 = new Button()
+                {
+                    Text = "L" + lockerRows[2][idxInRow].Id, //Whatever prop you wonna put as title;
+                    StyleId = "" + lockerRows[2][idxInRow].Id, //use a property from event as id to be passed to handler
+                    WidthRequest=btn_width,
+                    HeightRequest=btn_height
+                };
+                if (lockerRows[2][idxInRow].available)
+                {
+                    btn3.BackgroundColor = Color.Green;
+                }
+                else
+                {
+                    btn3.BackgroundColor = Color.Red;
+                }
+                Button btn4 = new Button()
+                {
+                    Text = "L" + lockerRows[3][idxInRow].Id, //Whatever prop you wonna put as title;
+                    StyleId = "" + lockerRows[3][idxInRow].Id, //use a property from event as id to be passed to handler
+                    WidthRequest=btn_width,
+                    HeightRequest=btn_height
+                };
+                if (lockerRows[3][idxInRow].available)
+                {
+                    btn4.BackgroundColor = Color.Green;
+                }
+                else
+                {
+                    btn4.BackgroundColor = Color.Red;
+                }
+                btn1.Clicked += Locker_ClickedAsync;
+                btn2.Clicked += Locker_ClickedAsync;
+                btn3.Clicked += Locker_ClickedAsync;
+                btn4.Clicked += Locker_ClickedAsync;
+                ButtonsRow1.Children.Add(btn1);
+                ButtonsRow2.Children.Add(btn2);
+                ButtonsRow3.Children.Add(btn3);
+                ButtonsRow4.Children.Add(btn4);
             }
         }
 

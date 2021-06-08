@@ -8941,11 +8941,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tomer\\source\\repos\\LockerStockerApp24.05\\essentialUIKitTry\\essentialUIKitTry.iOS\\essentialUIKitTry.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Tomer\\source\\repos\\LocckerStocker\\essentialUIKitTry\\essentialUIKitTry.iOS\\essentialUIKitTry.iOS.csproj",
       "projectName": "essentialUIKitTry.iOS",
-      "projectPath": "C:\\Users\\Tomer\\source\\repos\\LockerStockerApp24.05\\essentialUIKitTry\\essentialUIKitTry.iOS\\essentialUIKitTry.iOS.csproj",
+      "projectPath": "C:\\Users\\Tomer\\source\\repos\\LocckerStocker\\essentialUIKitTry\\essentialUIKitTry.iOS\\essentialUIKitTry.iOS.csproj",
       "packagesPath": "C:\\Users\\Tomer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tomer\\source\\repos\\LockerStockerApp24.05\\essentialUIKitTry\\essentialUIKitTry.iOS\\obj\\",
+      "outputPath": "C:\\Users\\Tomer\\source\\repos\\LocckerStocker\\essentialUIKitTry\\essentialUIKitTry.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -8968,8 +8968,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Tomer\\source\\repos\\LockerStockerApp24.05\\essentialUIKitTry\\essentialUIKitTry\\essentialUIKitTry.csproj": {
-              "projectPath": "C:\\Users\\Tomer\\source\\repos\\LockerStockerApp24.05\\essentialUIKitTry\\essentialUIKitTry\\essentialUIKitTry.csproj"
+            "C:\\Users\\Tomer\\source\\repos\\LocckerStocker\\essentialUIKitTry\\essentialUIKitTry\\essentialUIKitTry.csproj": {
+              "projectPath": "C:\\Users\\Tomer\\source\\repos\\LocckerStocker\\essentialUIKitTry\\essentialUIKitTry\\essentialUIKitTry.csproj"
             }
           }
         }
