@@ -30,7 +30,7 @@ namespace essentialUIKitTry.Views
             LockerIdLbl.Text = "Locker Id: " + lockerId;
 
 
-            string timeRemainingStr = ("" + (locker.release_time - DateTimeOffset.Now.AddHours(0))).Split('.')[0];
+            string timeRemainingStr = AzureApi.GetRemainingTime(locker); 
             TimeRemainingLbl.Text = timeRemainingStr;
 
 

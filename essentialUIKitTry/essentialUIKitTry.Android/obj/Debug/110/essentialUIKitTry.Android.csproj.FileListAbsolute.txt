@@ -1770,3 +1770,5 @@ C:\Users\Tomer\source\repos\LocckerStocker\essentialUIKitTry\essentialUIKitTry.A
 C:\Users\Tomer\source\repos\LocckerStocker\essentialUIKitTry\essentialUIKitTry.Android\obj\Debug\110\stamp\_GenerateJavaStubs.stamp
 C:\Users\Tomer\source\repos\LocckerStocker\essentialUIKitTry\essentialUIKitTry.Android\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Tomer\source\repos\LocckerStocker\essentialUIKitTry\essentialUIKitTry.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Tomer\source\repos\LocckerStocker\essentialUIKitTry\essentialUIKitTry.Android\obj\Debug\110\res\drawable\locked.jpg
+C:\Users\Tomer\source\repos\LocckerStocker\essentialUIKitTry\essentialUIKitTry.Android\obj\Debug\110\res\drawable\unlocked.jpg

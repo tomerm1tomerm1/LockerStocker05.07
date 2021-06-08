@@ -21,14 +21,12 @@ namespace essentialUIKitTry
     public partial class ChooseALocker : ContentPage
     {
 
-        public List<Locker> myList;
         public List<Locker>[] lockerRows = {new List<Locker>(), new List<Locker>(), new List<Locker>(), new List<Locker>() };
 
         public ChooseALocker()
         {
            //just in case so you can call this code several times np..
             InitializeComponent();
-            myList = new List<Locker>();
             SetLockerList();
         }
 
@@ -48,7 +46,8 @@ namespace essentialUIKitTry
             if ((!locker.available) && (locker.user_key == App.m_myUserKey))
             {
                 tmp_btn.BackgroundColor = Color.LightSteelBlue;
-                tmp_btn.Text = AzureApi.GetRemainingTime(locker);
+                tmp_btn.Padding = new Xamarin.Forms.Thickness(5,2);
+                tmp_btn.Text = "Time Remaining\n"+ AzureApi.GetRemainingTime(locker);
                 tmp_btn.FontSize = btnTimingFontSize;
             }
             else if (locker.available)
@@ -100,48 +99,22 @@ namespace essentialUIKitTry
         async void Locker_ClickedAsync(object sender, System.EventArgs e)
         {
             int locker_id= int.Parse((sender as Button).StyleId);
-            var available = await AzureApi.IsAvailableAsync(locker_id);
+            var locker = await AzureApi.GetLocker(locker_id);
 
-            if (available)
+            if (locker.available)
             {
                 AzureApi.SetOccupy(locker_id, "userKey");
                 await Navigation.PushAsync(new Locker1OrderedSuccess(locker_id));
             }
+            else if (locker.user_key == App.m_myUserKey) 
+            {
+                await Navigation.PushAsync(new LockerProfilePage(locker_id));
+            }
             else
             {
-                await Navigation.PushAsync(new Locker2OrderFailed(""+locker_id));  //FIXME: should be failed
+                await Navigation.PushAsync(new Locker2OrderFailed(""+locker_id));  
             }
             SetLockerList();
-        }
-        async void Locker2_Clicked(object sender, System.EventArgs e)
-        {
-            int locker_id= int.Parse((sender as Button).StyleId);
-            var available = await AzureApi.IsAvailableAsync(2);
-
-            if (available)
-            {
-                AzureApi.SetOccupy(2, "userKey");
-                await Navigation.PushAsync(new Locker1OrderedSuccess(locker_id));
-            }
-            else
-            {
-                await Navigation.PushAsync(new Locker2OrderFailed("2"));  //FIXME: should be failed
-            }
-        }
-        async void Locker3_Clicked(object sender, System.EventArgs e)
-        {
-            var available = await AzureApi.IsAvailableAsync(3);
-            int locker_id= int.Parse((sender as Button).StyleId);
-
-            if (available)
-            {
-                AzureApi.SetOccupy(3, "userKey");
-                await Navigation.PushAsync(new Locker1OrderedSuccess(locker_id));
-            }
-            else
-            {
-                await Navigation.PushAsync(new Locker2OrderFailed("3"));  //FIXME: should be failed
-            }
         }
     }
 }
