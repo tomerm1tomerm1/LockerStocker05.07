@@ -165,4 +165,17 @@
     <Folder Include="DataService\" />
     <Folder Include="Views\Templates\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="CounterFunctions2\CounterFunctions.csproj.user" />
+    <None Include="CounterFunctions2\CounterFunctions2.csproj" />
+    <None Include="CounterFunctions2\CounterFunctions2.csproj.user" />
+    <None Include="CounterFunctions2\Properties\PublishProfiles\CounterFunctions312546526 - Zip Deploy.pubxml.user" />
+    <None Include="CounterFunctions2\Properties\PublishProfiles\CounterFunctions312546526 - Zip Deploy1.pubxml.user" />
+    <None Include="CounterFunctions2\Properties\PublishProfiles\CounterFunctions3125465262 - Zip Deploy.pubxml.user" />
+    <None Include="CounterFunctions2\Properties\PublishProfiles\lockerFunctionApp - Zip Deploy.pubxml.user" />
+    <None Include="CounterFunctions2\Properties\PublishProfiles\SkeletonProjectFunctions - Zip Deploy.pubxml.user" />
+    <None Include="CounterFunctions2\Properties\serviceDependencies.local.json.user" />
+    <None Include="CounterFunctions2\Properties\serviceDependencies.lockerFunctionApp - Zip Deploy.json.user" />
+  </ItemGroup>
 </Project>

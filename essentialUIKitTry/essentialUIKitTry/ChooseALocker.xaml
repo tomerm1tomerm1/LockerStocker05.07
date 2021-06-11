@@ -21,6 +21,10 @@
         <StackLayout x:Name="ButtonsRow3" Orientation="Horizontal" HorizontalOptions="Center"/>
         <StackLayout x:Name="ButtonsRow4" Orientation="Horizontal" HorizontalOptions="Center"/>
 
+        <Label Text=" "/>
+        <Label x:Name="ModeInfoLbl" FontSize="18" FontFamily="Arial" HorizontalOptions="Center"  />
+        <Label Text=" "/>
+
 
 
 

@@ -113,6 +113,19 @@ namespace essentialUIKitTry.ViewModels
         }
 
         /// <summary>
+        /// Validation rule for password
+        /// </summary>
+        private Boolean IsAdmin(string email)
+        {
+            if (email == "admin@mail")
+            {
+                return true;
+            }
+            return false;
+        }
+
+
+        /// <summary>
         /// Invoked when the Log In button is clicked.
         /// </summary>
         /// <param name="obj">The Object</param>
@@ -129,6 +142,9 @@ namespace essentialUIKitTry.ViewModels
                     stringChars[i] = chars[random.Next(chars.Length)];
                 }
                 App.m_myUserKey = new string(stringChars);
+                if (IsAdmin(this.Email.Value)) {
+                    App.m_adminMode = true;
+                }
                 Application.Current.MainPage = new NavigationPage(new ChooseALocker());
             }
         }

@@ -33,7 +33,7 @@ namespace essentialUIKitTry
 
         Button getBtnForLocker(Locker locker)
         {
-            int btnTimingFontSize=10;
+            int btnTimingFontSize=9;
             int btn_width = 60;
             int btn_height = 80;
             Button tmp_btn = new Button()
@@ -53,6 +53,13 @@ namespace essentialUIKitTry
             else if (locker.available)
             {
                 tmp_btn.BackgroundColor = Color.Green;
+                if (App.m_adminMode)
+                {
+                tmp_btn.Padding = new Xamarin.Forms.Thickness(5,2);
+                tmp_btn.Text = locker.user_key +"\n"+ AzureApi.GetRemainingTime(locker);
+                tmp_btn.FontSize = btnTimingFontSize;
+
+                }
             }
             else
             {
@@ -93,6 +100,12 @@ namespace essentialUIKitTry
                 ButtonsRow2.Children.Add(btn2);
                 ButtonsRow3.Children.Add(btn3);
                 ButtonsRow4.Children.Add(btn4);
+            }
+            if (App.m_adminMode)
+            {
+                ModeInfoLbl.Text = "You are logged-in as Admin";
+                ModeInfoLbl.TextColor = Color.DarkGreen;
+                ModeInfoLbl.FontAttributes = FontAttributes.Bold;
             }
         }
 
