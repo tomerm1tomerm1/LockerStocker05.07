@@ -685,6 +685,30 @@
           "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {}
         }
       },
+      "Microsoft.Identity.Client/4.32.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.SecureString": "4.3.0",
+          "Xamarin.AndroidX.Browser": "1.0.0"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop",
+          "Microsoft.CSharp",
+          "System",
+          "System.Core",
+          "System.IdentityModel",
+          "System.Net.Http",
+          "System.Runtime.Serialization",
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/monoandroid10.0/Microsoft.Identity.Client.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid10.0/Microsoft.Identity.Client.dll": {}
+        }
+      },
       "Microsoft.Net.Http.Headers/2.1.0": {
         "type": "package",
         "dependencies": {
@@ -1318,7 +1342,7 @@
           "lib/MonoAndroid10/_._": {}
         }
       },
-      "System.Security.SecureString/4.0.0": {
+      "System.Security.SecureString/4.3.0": {
         "type": "package",
         "compile": {
           "ref/MonoAndroid10/_._": {}
@@ -2879,6 +2903,7 @@
         "dependencies": {
           "Microsoft.Azure.Cosmos.Table": "1.0.8",
           "Microsoft.Azure.WebJobs.Extensions.Http": "3.0.12",
+          "Microsoft.Identity.Client": "4.32.1",
           "Newtonsoft.Json": "13.0.1",
           "SkiaSharp.Extended": "1.60.0",
           "SkiaSharp.Svg": "1.60.0",
@@ -3598,6 +3623,38 @@
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
         "microsoft.extensions.primitives.2.1.0.nupkg.sha512",
         "microsoft.extensions.primitives.nuspec"
+      ]
+    },
+    "Microsoft.Identity.Client/4.32.1": {
+      "sha512": "3rV1wAYS+ehrEogsd4wnrD/0NZIwxAZdNKEtTIk0t3RrkZdwNiaUcpIrIlsjYhRC8plsHBhXFM4deLopWcyXyQ==",
+      "type": "package",
+      "path": "microsoft.identity.client/4.32.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid10.0/Microsoft.Identity.Client.dll",
+        "lib/monoandroid10.0/Microsoft.Identity.Client.xml",
+        "lib/monoandroid90/Microsoft.Identity.Client.dll",
+        "lib/monoandroid90/Microsoft.Identity.Client.xml",
+        "lib/net45/Microsoft.Identity.Client.dll",
+        "lib/net45/Microsoft.Identity.Client.xml",
+        "lib/net461/Microsoft.Identity.Client.dll",
+        "lib/net461/Microsoft.Identity.Client.xml",
+        "lib/net5.0-windows10.0.17763/Microsoft.Identity.Client.dll",
+        "lib/net5.0-windows10.0.17763/Microsoft.Identity.Client.xml",
+        "lib/netcoreapp2.1/Microsoft.Identity.Client.dll",
+        "lib/netcoreapp2.1/Microsoft.Identity.Client.xml",
+        "lib/netstandard1.3/Microsoft.Identity.Client.dll",
+        "lib/netstandard1.3/Microsoft.Identity.Client.xml",
+        "lib/uap10.0/Microsoft.Identity.Client.dll",
+        "lib/uap10.0/Microsoft.Identity.Client.pri",
+        "lib/uap10.0/Microsoft.Identity.Client.xml",
+        "lib/xamarinios10/Microsoft.Identity.Client.dll",
+        "lib/xamarinios10/Microsoft.Identity.Client.xml",
+        "lib/xamarinmac20/Microsoft.Identity.Client.dll",
+        "lib/xamarinmac20/Microsoft.Identity.Client.xml",
+        "microsoft.identity.client.4.32.1.nupkg.sha512",
+        "microsoft.identity.client.nuspec"
       ]
     },
     "Microsoft.Net.Http.Headers/2.1.0": {
@@ -5712,10 +5769,10 @@
         "system.runtime.serialization.primitives.nuspec"
       ]
     },
-    "System.Security.SecureString/4.0.0": {
-      "sha512": "sqzq9GD6/b0yqPuMpgIKBuoLf4VKAj8oAfh4kXSzPaN6eoKY3hRi9C5L27uip25qlU+BGPfb0xh2Rmbwc4jFVA==",
+    "System.Security.SecureString/4.3.0": {
+      "sha512": "PnXp38O9q/2Oe4iZHMH60kinScv6QiiL2XH54Pj2t0Y6c2zKPEiAZsM/M3wBOHLNTBDFP0zfy13WN2M0qFz5jg==",
       "type": "package",
-      "path": "system.security.securestring/4.0.0",
+      "path": "system.security.securestring/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5749,7 +5806,7 @@
         "runtimes/unix/lib/netstandard1.3/System.Security.SecureString.dll",
         "runtimes/win/lib/net46/System.Security.SecureString.dll",
         "runtimes/win/lib/netstandard1.3/System.Security.SecureString.dll",
-        "system.security.securestring.4.0.0.nupkg.sha512",
+        "system.security.securestring.4.3.0.nupkg.sha512",
         "system.security.securestring.nuspec"
       ]
     },
@@ -7313,6 +7370,7 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v11.0": [
+      "Microsoft.Identity.Client >= 4.32.1",
       "SkiaSharp.Extended >= 1.60.0",
       "SkiaSharp.Svg >= 1.60.0",
       "SkiaSharp.Views.Forms >= 1.68.0",
@@ -7332,18 +7390,18 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Tomer\\.nuget\\packages\\": {},
+    "C:\\Users\\amirl\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tomer\\source\\repos\\LocckerStocker\\essentialUIKitTry\\essentialUIKitTry.Android\\essentialUIKitTry.Android.csproj",
+      "projectUniqueName": "C:\\Users\\amirl\\Source\\Repos\\GitTomer12.06LocckerStocker\\essentialUIKitTry\\essentialUIKitTry.Android\\essentialUIKitTry.Android.csproj",
       "projectName": "essentialUIKitTry.Android",
-      "projectPath": "C:\\Users\\Tomer\\source\\repos\\LocckerStocker\\essentialUIKitTry\\essentialUIKitTry.Android\\essentialUIKitTry.Android.csproj",
-      "packagesPath": "C:\\Users\\Tomer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tomer\\source\\repos\\LocckerStocker\\essentialUIKitTry\\essentialUIKitTry.Android\\obj\\",
+      "projectPath": "C:\\Users\\amirl\\Source\\Repos\\GitTomer12.06LocckerStocker\\essentialUIKitTry\\essentialUIKitTry.Android\\essentialUIKitTry.Android.csproj",
+      "packagesPath": "C:\\Users\\amirl\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\amirl\\Source\\Repos\\GitTomer12.06LocckerStocker\\essentialUIKitTry\\essentialUIKitTry.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -7351,7 +7409,7 @@
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Tomer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\amirl\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -7366,8 +7424,8 @@
       "frameworks": {
         "monoandroid11.0": {
           "projectReferences": {
-            "C:\\Users\\Tomer\\source\\repos\\LocckerStocker\\essentialUIKitTry\\essentialUIKitTry\\essentialUIKitTry.csproj": {
-              "projectPath": "C:\\Users\\Tomer\\source\\repos\\LocckerStocker\\essentialUIKitTry\\essentialUIKitTry\\essentialUIKitTry.csproj"
+            "C:\\Users\\amirl\\Source\\Repos\\GitTomer12.06LocckerStocker\\essentialUIKitTry\\essentialUIKitTry\\essentialUIKitTry.csproj": {
+              "projectPath": "C:\\Users\\amirl\\Source\\Repos\\GitTomer12.06LocckerStocker\\essentialUIKitTry\\essentialUIKitTry\\essentialUIKitTry.csproj"
             }
           }
         }
@@ -7376,6 +7434,10 @@
     "frameworks": {
       "monoandroid11.0": {
         "dependencies": {
+          "Microsoft.Identity.Client": {
+            "target": "Package",
+            "version": "[4.32.1, )"
+          },
           "SkiaSharp.Extended": {
             "target": "Package",
             "version": "[1.60.0, )"

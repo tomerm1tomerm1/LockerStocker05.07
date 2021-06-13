@@ -51,6 +51,7 @@ public class MonoPackageManager_Resources {
 		"Microsoft.Extensions.Options.ConfigurationExtensions.dll",
 		"Microsoft.Extensions.Options.dll",
 		"Microsoft.Extensions.Primitives.dll",
+		"Microsoft.Identity.Client.dll",
 		"Microsoft.Net.Http.Headers.dll",
 		"Microsoft.OData.Core.dll",
 		"Microsoft.OData.Edm.dll",

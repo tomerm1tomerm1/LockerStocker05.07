@@ -120,7 +120,8 @@
                             Command="{Binding LoginCommand}"
                             HorizontalOptions="Fill"
                             Style="{StaticResource GradientButtonStyle}"
-                            Text="SIGN IN" />
+                            Text="SIGN IN"
+                            Clicked="OnSignInClicked"/>
 
 
                         <Label

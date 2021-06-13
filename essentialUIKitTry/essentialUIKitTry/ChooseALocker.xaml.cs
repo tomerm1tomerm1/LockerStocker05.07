@@ -9,10 +9,7 @@ using CounterFunctions;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
-
-
-
+using Microsoft.Identity.Client;
 
 namespace essentialUIKitTry
 {
@@ -23,9 +20,12 @@ namespace essentialUIKitTry
 
         public List<Locker>[] lockerRows = {new List<Locker>(), new List<Locker>(), new List<Locker>(), new List<Locker>() };
 
-        public ChooseALocker()
+        private AuthenticationResult authenticationResult;
+        public ChooseALocker(AuthenticationResult authResult)
         {
-           //just in case so you can call this code several times np..
+            //just in case so you can call this code several times np..
+            authenticationResult = authResult;
+            //var name = authenticationResult.Account.Username;
             InitializeComponent();
             SetLockerList();
         }

@@ -15,6 +15,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using Microsoft.Identity.Client;
 
 namespace essentialUIKitTry.iOS
 {
@@ -51,6 +52,11 @@ namespace essentialUIKitTry.iOS
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
+        }
+        public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
+        {
+            AuthenticationContinuationHelper.SetAuthenticationContinuationEventArgs(url);
+            return base.OpenUrl(app, url, options);
         }
     }
 }

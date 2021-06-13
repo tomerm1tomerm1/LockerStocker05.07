@@ -145,7 +145,7 @@ namespace essentialUIKitTry.ViewModels
                 if (IsAdmin(this.Email.Value)) {
                     App.m_adminMode = true;
                 }
-                Application.Current.MainPage = new NavigationPage(new ChooseALocker());
+                //Application.Current.MainPage = new NavigationPage(new ChooseALocker());
             }
         }
 

@@ -1,4 +1,5 @@
 using essentialUIKitTry.Views;
+using Microsoft.Identity.Client;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,12 +13,22 @@ namespace essentialUIKitTry
 {
     public partial class App : Application
     {
+        public static IPublicClientApplication AuthenticationClient { get; private set; }
+
+        public static object UIParent { get; set; } = null;
+
         public static string ImageServerPath { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
         public static string m_myUserKey { get; set; } = "Tomer";
         public static Boolean m_adminMode { get; set; } = false;
         public App()
         {
             InitializeComponent();
+
+            AuthenticationClient = PublicClientApplicationBuilder.Create(Constants.clientId)
+                .WithIosKeychainSecurityGroup(Constants.IosKeychainSecurityGroups)
+                .WithB2CAuthority(Constants.AuthoritySignIn)
+                .WithRedirectUri($"msal{Constants.clientId}://auth")
+                .Build();
 
             MainPage = new NavigationPage(new SimpleLoginPage());
         }
