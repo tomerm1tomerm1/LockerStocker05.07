@@ -3,9 +3,8 @@
     "",
     "\\essentialUIKitTry",
     "\\essentialUIKitTry\\essentialUIKitTry",
-    "\\essentialUIKitTry\\essentialUIKitTry\\ViewModels",
     "\\essentialUIKitTry\\essentialUIKitTry\\Views"
   ],
-  "SelectedNode": "\\essentialUIKitTry\\essentialUIKitTry\\App.xaml.cs",
+  "SelectedNode": "\\essentialUIKitTry\\essentialUIKitTry\\Views\\SimpleLoginPage.xaml.cs",
   "PreviewInSolutionExplorer": false
 }

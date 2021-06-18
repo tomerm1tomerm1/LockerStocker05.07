@@ -70,9 +70,6 @@
     <EmbeddedResource Update="ChooseALocker.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Sign_Up_Main_Page.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Styles\AvatarViewStyles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
@@ -154,12 +151,6 @@
     <EmbeddedResource Update="Views\SimpleLoginPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\SimpleSignUpPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\SimpleSignUpPage_Admin.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
@@ -178,5 +169,11 @@
     <None Include="CounterFunctions2\Properties\PublishProfiles\SkeletonProjectFunctions - Zip Deploy.pubxml.user" />
     <None Include="CounterFunctions2\Properties\serviceDependencies.local.json.user" />
     <None Include="CounterFunctions2\Properties\serviceDependencies.lockerFunctionApp - Zip Deploy.json.user" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v11.0\Mono.Android.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

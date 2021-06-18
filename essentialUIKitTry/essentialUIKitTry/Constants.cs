@@ -14,5 +14,6 @@ namespace essentialUIKitTry
         public static readonly string[] Scopes = new string[] { "openid", "offline_access" };
         public static readonly string AuthorityBase = $"https://{tenantName}.b2clogin.com/tfp/{tenantId}/";
         public static readonly string AuthoritySignIn = $"{AuthorityBase}{policySignin}";
+        public static readonly string policyPassword = "B2C_1_PasswordReset";
     }
 }

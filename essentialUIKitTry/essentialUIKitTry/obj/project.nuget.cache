@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QIwz1YMdHlIybfcGSD7DWqXQ6eExo/1Xl3JgqFMDtHWQqEI65paBhQAMEk0MY2dDgEB1cG7S2q0w2hq/iBuE4g==",
+  "dgSpecHash": "LGuq6WtdGpfVZ5SFkRqQZH1up1vv7vA/y3tJ8Hwkr4LEL2OoswiTFDGGBAC/uUJwegAj+ZCDnOSnT5n92VWoSw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\amirl\\Source\\Repos\\GitTomer12.06LocckerStocker\\essentialUIKitTry\\essentialUIKitTry\\essentialUIKitTry.csproj",
+  "projectFilePath": "C:\\Users\\amirl\\Source\\Repos\\GitLockerStocker13.06\\essentialUIKitTry\\essentialUIKitTry\\essentialUIKitTry.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\amirl\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.4\\microsoft.aspnet.webapi.client.5.2.4.nupkg.sha512",
     "C:\\Users\\amirl\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.1.0\\microsoft.aspnetcore.authentication.abstractions.2.1.0.nupkg.sha512",
