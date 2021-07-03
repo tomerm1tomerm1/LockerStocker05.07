@@ -83,6 +83,8 @@ namespace essentialUIKitTry.Views
             }
         }
 
+
+
         async Task<AuthenticationResult> OnForgotPassword()
         {
 

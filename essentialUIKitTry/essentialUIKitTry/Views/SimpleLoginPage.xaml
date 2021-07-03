@@ -96,22 +96,11 @@
                             
                             HorizontalOptions="Fill"
                             Style="{StaticResource GradientButtonStyle}"
-                            Text="SIGN IN FOR CUSTOMER"
+                            Text="SIGN IN"
                             Clicked="OnSignInClicked"/>
 
 
-                        <!--  Sign In For Admin button  -->
-                        <buttons:SfButton
-                            Grid.Row="7"
-                            Clicked="OnSignInClicked"
-                            Margin="0,16,0,16"
-                            Text="SIGN IN FOR ADMIN"
-                            Command="{Binding SignUpCommand}"
-                            CornerRadius="20"
-                            Style="{StaticResource GradientButtonStyle}"
-                            HorizontalOptions="Fill"
-                            HeightRequest="40">
-                        </buttons:SfButton>
+
                     </Grid>
 
                     <StackLayout
